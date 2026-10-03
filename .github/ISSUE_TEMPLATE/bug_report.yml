@@ -1,0 +1,42 @@
+name: "Bug / Ошибка"
+description: "Installer failed or behaved unexpectedly / Установщик сработал неправильно."
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Спасибо за отчёт! Не вставляйте API-ключи, токены и другие секреты. / Thanks for reporting! Never paste API keys or credentials."
+  - type: input
+    id: version
+    attributes:
+      label: "Версия Starter Kit / Version"
+      placeholder: "v0.4.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: "Язык интерфейса / UI language"
+      options: ["Русский", "English"]
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: "Версия Windows / Windows version"
+      options: ["Windows 10", "Windows 11", "Другая / Other"]
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "Что произошло? / What happened?"
+      description: "Опишите ожидаемый и фактический результат. / Expected vs actual behavior."
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: "Журнал установки / Installer log"
+      description: "Удалите секреты и приватные пути, которые не хотите публиковать. / Remove credentials and private paths."
+      render: text

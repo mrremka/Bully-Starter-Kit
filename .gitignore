@@ -1,0 +1,15 @@
+# Runtime downloads / secrets
+downloads/*
+!downloads/.gitkeep
+*.key
+*.log
+
+# Local build output
+release/
+*.zip
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

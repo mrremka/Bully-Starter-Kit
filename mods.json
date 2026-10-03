@@ -1,0 +1,80 @@
+{
+  "packVersion": "0.4.0",
+  "game": "Bully: Scholarship Edition (PC)",
+  "defaults": {
+    "fpsLimit": 60
+  },
+  "nexus": {
+    "gameDomain": "bullyscholarshipedition",
+    "publicAppSlug": "",
+    "testingAuth": "optional-personal-api-key",
+    "publicSsoEnabled": false,
+    "freeAccountFallback": "official-browser-slow-download",
+    "publicDefaultMode": "official-browser-assisted",
+    "availableModes": [
+      {
+        "id": "auto",
+        "label": "Auto",
+        "requires": "Nexus API key + Premium for direct automatic downloads"
+      },
+      {
+        "id": "slow",
+        "label": "Slow Download",
+        "requires": "Free or Premium account; official Nexus browser flow"
+      }
+    ],
+    "autoFallback": "official-browser-slow-download-on-403-or-missing-key"
+  },
+  "mods": [
+    {
+      "id": "silentpatch",
+      "name": "SilentPatch for Bully",
+      "author": "CookiePLMonster",
+      "category": "Core",
+      "recommended": true,
+      "source": "https://github.com/CookiePLMonster/SilentPatchBully",
+      "download": "github-latest-release",
+      "notes": "Stability, crash fixes, memory fixes and FPS limiter. Downloaded from the official GitHub release."
+    },
+    {
+      "id": "essential-fixes",
+      "name": "Razc01na's Essential Fixes & Improvements",
+      "author": "Razc01na",
+      "preservationUploader": "mrnickson01",
+      "nexusModId": 396,
+      "preferredFileName": "",
+      "category": "Core",
+      "recommended": true,
+      "source": "https://www.nexusmods.com/bullyscholarshipedition/mods/396",
+      "authorProfile": "https://www.nexusmods.com/profile/mrnickson01",
+      "download": "nexus-api-v3-with-official-web-fallback",
+      "notes": "Mission/softlock fixes and 60 FPS compatibility. The installer reads only Main/To Scripts and Optional directly from the official Nexus ZIP; default.idb is excluded and the archive is not fully extracted."
+    },
+    {
+      "id": "one-percent-better",
+      "name": "One Percent Better Project - Main",
+      "author": "SimonBestia",
+      "nexusModId": 148,
+      "preferredFileName": "One Percent Better Mod Main",
+      "category": "Visual",
+      "recommended": true,
+      "source": "https://www.nexusmods.com/bullyscholarshipedition/mods/148",
+      "authorProfile": "https://www.nexusmods.com/profile/SimonBestia",
+      "download": "nexus-api-v3-with-official-web-fallback",
+      "notes": "Vanilla-friendly lighting/shadow polish. Only the Main archive is used; the installer reads gsa_info.dat directly and writes it to Graphics without fully extracting the ZIP.",
+      "optional": true
+    }
+  ],
+  "gameLocalization": {
+    "id": "bully-russian-built-in",
+    "name": "Built-in Russian localization activator",
+    "type": "configuration",
+    "download": "none",
+    "optional": true,
+    "steamLanguageCode": 1049,
+    "voice": "English",
+    "source": "https://steamcommunity.com/sharedfiles/filedetails/?id=3576278360",
+    "reference": "https://www.pcgamingwiki.com/wiki/Bully:_Scholarship_Edition",
+    "notes": "Asked after mod installation. Steam activation changes the built-in language code; no translation archive is redistributed."
+  }
+}
